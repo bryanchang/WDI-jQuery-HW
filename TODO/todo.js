@@ -14,17 +14,13 @@ $(document).ready(function(){
 			var li = $(this).parent();
 
 			if ($(this).prop('checked')) {
-					li.insertAfter('#completed_list').css('color', 'red').css('text-decoration', 'line-through');
-					// li.insertAfter('#completed_list').addClass('complete')
-
+					// li.insertAfter('#completed_list').css('color', 'red').css('text-decoration', 'line-through');
+					li.insertAfter('#completed_list').addClass('completed_text');
 			} 
 			else {
-					li.insertAfter('#todo_list');
-					li.css('color', 'black');
-					li.css('text-decoration', 'none');
+					li.insertAfter('#todo_list').removeClass('completed_text');
 			}
 		});
-
 
 		$(checkbox).appendTo(lis);
 	  $(todoInput).appendTo(lis);
