@@ -4,6 +4,7 @@ $(document).ready(function(){
 		var todoInput = $("#todo_input").val();
 		var list = "<li>" 
 							+ todoInput
+							+ "<input class='checkbox' type='checkbox'>"
 							+ "<img class='trash' src='trash.svg'>" 
 							+ "</li>";
 		$(list).insertAfter('#todo_list');
@@ -23,6 +24,7 @@ $(document).ready(function(){
 					$(this).parent().insertAfter('#todo_items');
 					$(this).parent().css('color', 'black');
 					$(this).parent().css('text-decoration', 'none');
+
 			}
 		});
 	});

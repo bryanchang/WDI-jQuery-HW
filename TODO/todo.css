@@ -20,6 +20,10 @@ li{
 	height: 35px;
 }
 
+.checkbox{
+	margin-left: 15px;
+}
+
 #todo_input{
 	width: 250px;
 }
