@@ -1,0 +1,11 @@
+body{
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.container{
+	width: 500px;
+	margin-top: 50px;
+	margin: auto;
+	padding: 0 25px 50px;
+	border: 1px dotted #000;
+}
