@@ -1,31 +1,37 @@
 $(document).ready(function(){
 
 	$("button").on('click', function(){
-		var todoInput = $("#todo_input").val();
-		var list = "<li>" 
-							+ "<input class='checkbox' type='checkbox'>"
-							+ todoInput
-							+ "<img class='trash' src='trash.svg'>" 
-							+ "</li>";
-		$(list).insertAfter('#todo_list');
-		$("#todo_input").val('');
+		var todoInput = $("<span>" + $("#todo_input").val() + "</span>");
+		var lis = $("<li></li>");
+		var checkbox = $("<input class='checkbox' type='checkbox'>");
+		var img = $("<img class='trash' src='trash.svg'>");
 
-		$('.trash').on('click', function() {
+		img.on('click', function() {
 			$(this).parent().slideUp(), function(){$(this).remove();}
 		});			
 
-		$('.checkbox').on('click', function() {
+		checkbox.on('click', function() {
+			var li = $(this).parent();
+
 			if ($(this).prop('checked')) {
-					$(this).parent().insertAfter('#completed_list');
-					$(this).parent().css('color', 'red');
-					$(this).parent().css('text-decoration', 'line-through');
+					li.insertAfter('#completed_list').css('color', 'red').css('text-decoration', 'line-through');
+					// li.insertAfter('#completed_list').addClass('complete')
+
 			} 
 			else {
-					$(this).parent().insertAfter('#todo_list');
-					$(this).parent().css('color', 'black');
-					$(this).parent().css('text-decoration', 'none');
-
+					li.insertAfter('#todo_list');
+					li.css('color', 'black');
+					li.css('text-decoration', 'none');
 			}
 		});
+
+
+		$(checkbox).appendTo(lis);
+	  $(todoInput).appendTo(lis);
+	  $(img).appendTo(lis);							 
+		$(lis).insertAfter('#todo_list');
+		$("#todo_input").val('');
+
+
 	});
 });
