@@ -15,13 +15,13 @@ h1{
 }
 
 li{
-	padding-left: 50px;
+	padding-left: 10px;
 	list-style-type: none;
 	height: 35px;
 }
 
 .checkbox{
-	margin-left: 15px;
+	margin-right: 15px;
 }
 
 #todo_input{
@@ -33,7 +33,7 @@ input[type=button]]{
 }
 
 .trash{
-	margin-left: 15px;
+	margin-left: 150px;
 	width: 15px;
 }
 
