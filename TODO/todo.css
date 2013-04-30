@@ -3,9 +3,37 @@ body{
 }
 
 .container{
-	width: 500px;
+	width: 370px;
 	margin-top: 50px;
 	margin: auto;
-	padding: 0 25px 50px;
+	padding: 0 25px 100px;
 	border: 1px dotted #000;
+}
+
+h1{
+	font-weight: 700;
+}
+
+li{
+	padding-left: 50px;
+	list-style-type: none;
+	height: 35px;
+}
+
+#todo_input{
+	width: 250px;
+}
+
+input[type=button]]{
+	margin-left: 15px;
+}
+
+.trash{
+	margin-left: 15px;
+	width: 15px;
+}
+
+.completed_text {
+	text-decoration: line-through;
+	color: red;
 }
